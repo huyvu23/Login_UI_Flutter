@@ -9,6 +9,8 @@ class CustomScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.transparent,
       ),
       //  cho phép bạn mở rộng nội dung widget con của AppBar ra phía sau AppBar
@@ -20,7 +22,7 @@ class CustomScaffold extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
         ),
-        SafeArea(child: child!)
+        SafeArea(child: child)
       ]),
     );
   }

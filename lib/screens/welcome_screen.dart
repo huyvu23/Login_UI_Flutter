@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/screens/signin_screen.dart';
+import 'package:login_ui_flutter/screens/signup_screen.dart';
+import 'package:login_ui_flutter/theme/theme.dart';
 import 'package:login_ui_flutter/widgets/custom_scaffold.dart';
 import 'package:login_ui_flutter/widgets/welcome_button.dart';
 
@@ -35,8 +38,20 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.bottomRight,
               child: Row(
                 children: [
-                  Expanded(child: WelcomeButton()),
-                  Expanded(child: WelcomeButton())
+                  const Expanded(
+                      child: WelcomeButton(
+                    buttonText: 'Sign in',
+                    onTap: SignInScreen(),
+                    color: Colors.transparent,
+                    textColor: Colors.white,
+                  )),
+                  Expanded(
+                      child: WelcomeButton(
+                    buttonText: 'Sign up',
+                    onTap: const SignUpScreen(),
+                    color: Colors.white,
+                    textColor: lightColorScheme.primary,
+                  )),
                 ],
               ),
             ),
